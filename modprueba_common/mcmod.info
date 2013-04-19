@@ -1,0 +1,20 @@
+[
+{
+  "modid": "ModPrueba",
+  "name": "Mod de Prueba",
+  "description": "Mod de prueba apetepórico",
+  "version": "0.0.1",
+  "url": "https://github.com/marcs77/modminecraft_prueba",
+  "updateUrl": "",
+  "authorList": [
+    "Marcs77"
+  ],
+  "credits": "Marcs77 y pahimar por los tutoriales :D",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
