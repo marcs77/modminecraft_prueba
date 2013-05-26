@@ -2,7 +2,7 @@ package com.marcs.modprueba.lib;
 
 public class Strings {
     //Bloques
-    public static final String TESTBLOCK_NAME = "Bloque de prueba";
+    public static final String BISMUTH_ORE_BLOCK_NAME = "Bloque de prueba";
     public static final String TUNGSTEN_ORE_BLOCK_NAME = "Mena de Tungsteno";
     public static final String TESTBLOCK_SLAB_NAME = "Medio bloque";
     public static final String TESTBLOCK_SLABDOUBLE_NAME = "Doble medio bloque";
