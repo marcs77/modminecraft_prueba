@@ -2,6 +2,7 @@ package com.marcs.modprueba;
 
 import com.marcs.modprueba.block.ModBlocks;
 import com.marcs.modprueba.core.proxy.ClientProxy;
+import com.marcs.modprueba.crafting.ModCrafting;
 import com.marcs.modprueba.item.ModItems;
 import com.marcs.modprueba.lib.Reference;
 import com.marcs.modprueba.worldgen.WorldGeneratorPrueba;
@@ -28,6 +29,7 @@ public class ModPrueba {
     public void preInit(FMLPreInitializationEvent event){
         ModBlocks.init();
         ModItems.init();
+        ModCrafting.init();
     }
     
     @Init

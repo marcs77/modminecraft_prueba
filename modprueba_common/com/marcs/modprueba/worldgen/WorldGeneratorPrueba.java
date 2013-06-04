@@ -41,12 +41,19 @@ public class WorldGeneratorPrueba implements IWorldGenerator{
 
     private void generateSurface(World world, Random random, int chunkX, int chunkZ) {
         // TODO Auto-generated method stub
-        for (int i=0; i<20; i++){
+        for (int i=0; i<13; i++){
             int xCoord = chunkX+random.nextInt(16);
             int yCoord = random.nextInt(50);
             int zCoord = chunkZ+random.nextInt(16);
             
-            (new WorldGenMinable(ModBlocks.blockTungstenOre.blockID, 9)).generate(world, random, xCoord, yCoord, zCoord);
+            (new WorldGenMinable(ModBlocks.blockTungstenOre.blockID, 5)).generate(world, random, xCoord, yCoord, zCoord);
+        }
+        for (int i=0; i<12; i++){
+            int xCoord = chunkX+random.nextInt(16);
+            int yCoord = random.nextInt(40);
+            int zCoord = chunkZ+random.nextInt(16);
+            
+            (new WorldGenMinable(ModBlocks.blockBismuthOre.blockID, 9)).generate(world, random, xCoord, yCoord, zCoord);
         }
     }
 

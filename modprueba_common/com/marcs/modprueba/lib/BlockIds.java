@@ -6,4 +6,6 @@ public class BlockIds {
     public static final int TEST_SLAB = 501;
     public static final int TEST_SLAB_DOUBLE = 502;
     public static final int BISMUTH_ORE_BLOCK = 503;
+    public static final int BISMUTH_BRICK = 504;
+    public static final int BISMUTH_BRICK_DYED = 505;
 }
