@@ -14,23 +14,29 @@ public class ModCrafting {
         /**
          * Shaped Crafting
          */
-        //9xNuggets = 1xIngot
+        //9xNuggets -> 1xIngot
         GameRegistry.addRecipe(new ItemStack(ModItems.bismuthIngot), new Object[] { "sss", "sss", "sss",
             Character.valueOf('s'), ModItems.bismuthNugget});
-        //4xBismuthN + 1xBrick = 1BismuthBrick
+        //4xBismuthN + 1xBrick -> 1BismuthBrick
         GameRegistry.addRecipe(new ItemStack(ModBlocks.blockBismuthBrick), new Object[] { " i ", "ibi", " i ",
             Character.valueOf('i'), ModItems.bismuthNugget,
             Character.valueOf('b'), Block.stoneBrick
             });
+        //EnchantingDust
+        GameRegistry.addRecipe(new ItemStack(ModItems.enchantingDust,32), new Object[] { "tdt", "xbx", "txt",
+            Character.valueOf('b'), ModItems.bismuthDust,
+            Character.valueOf('t'), ModItems.tungstenDust,
+            Character.valueOf('d'), Item.diamond,
+            Character.valueOf('x'), Item.expBottle});
         
         /**
          * Shapeless Crafting 
          */
-        //1xIngot = 9xNuggets
+        //1xIngot -> 9xNuggets
         GameRegistry.addShapelessRecipe(new ItemStack(ModItems.bismuthNugget,9), new Object[]{
             new ItemStack(ModItems.bismuthIngot)
         });
-        //Brick dyed-> Brick+Dye = Dyed Brick
+        //Brick+Dye -> Dyed Brick
         for (int i=0;i<16;i++){
             ItemStack brickd = new ItemStack(ModBlocks.blockBrickDyed,1,i);
             ItemStack brick = new ItemStack(ModBlocks.blockBismuthBrick,1);
@@ -38,6 +44,10 @@ public class ModCrafting {
             
             GameRegistry.addShapelessRecipe(brickd,brick,dye);
         }
+        //Bismuth Ingot -> Bismuth Dust
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.bismuthDust,1), new Object[]{
+            new ItemStack(ModItems.bismuthIngot)
+        });
         /**
          * Smelting
          */
