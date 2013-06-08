@@ -11,6 +11,11 @@ import com.marcs.modprueba.item.ModItems;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModCrafting {
+    public static final Object modifiers[] = {Block.blockGold, Block.blockRedstone,
+        Item.diamond, Item.emerald, Block.cloth};
+    public static final Enchantment enchantments[] = {Enchantment.fortune, Enchantment.efficiency, 
+        Enchantment.unbreaking, Enchantment.fortune, Enchantment.silkTouch};
+    public static final int lvls[] = {1,2,2,3,1};
     public static void init(){
         /**
          * Shaped Crafting
@@ -31,14 +36,7 @@ public class ModCrafting {
             Character.valueOf('x'), Item.expBottle});
         //Enchants
         //Diamond
-        addDustEnchant(Item.pickaxeDiamond, Enchantment.efficiency, 2);
-        addDustEnchant(Item.swordDiamond, Enchantment.knockback, 20);
-        addDustEnchant(Item.axeDiamond, Enchantment.unbreaking,2);
-        addDustEnchant(Item.shovelDiamond, Enchantment.silkTouch,1);
-        addDustEnchant(Item.hoeDiamond, Enchantment.unbreaking,2);
-        //Bow
-        addDustEnchant(Item.bow, Enchantment.power,15);
-        
+        addEnchantableTool(Item.pickaxeDiamond);
         /**
          * Shapeless Crafting 
          */
@@ -68,12 +66,19 @@ public class ModCrafting {
         GameRegistry.addSmelting(ModBlocks.blockBismuthOre.blockID, new ItemStack(ModItems.bismuthIngot), 0.7F);
 
     }
-    public static void addDustEnchant(Item tool1, Enchantment en, int lvl){
-        ItemStack tool = new ItemStack(tool1,1,0);
-        ItemStack result = new ItemStack(tool1);
-        result.addEnchantment(en, lvl);
-        GameRegistry.addRecipe(result, new Object[] { "ddd", "dtd", "ddd",
-            Character.valueOf('t'), tool,
-            Character.valueOf('d'), ModItems.enchantingDust});
+    public static void addEnchantableTool(Item tool){
+        for (int i = 0; i<5; i++){
+            ItemStack toolEnc = new ItemStack(tool,1,0);
+            Enchantment e = enchantments[i];
+            int lv = lvls[i];
+            ItemStack tl =  toolEnc;
+            toolEnc.addEnchantment(e, lv);
+            GameRegistry.addRecipe(toolEnc, new Object[]{
+                    "dmd","dtd","ddd",
+                    Character.valueOf('d'), ModItems.enchantingDust,
+                    Character.valueOf('t'), tl,
+                    Character.valueOf('m'), modifiers[i]
+                    });
+        }
     }
 }
