@@ -9,7 +9,7 @@ import net.minecraft.item.ItemFood;
 public class ItemPastacion extends ItemFood{
 
     public ItemPastacion(int par1) {
-        super(par1, 0, 10F, false);
+        super(par1, 10, 0F, false);
         setCreativeTab(CreativeTabs.tabFood);
     }
     @SideOnly(Side.CLIENT)

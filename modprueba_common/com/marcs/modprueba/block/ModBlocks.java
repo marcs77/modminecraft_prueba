@@ -1,14 +1,5 @@
 package com.marcs.modprueba.block;
 
-import com.marcs.modprueba.lib.BlockIds;
-import com.marcs.modprueba.lib.Reference;
-import com.marcs.modprueba.lib.Strings;
-
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
-
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemStack;
 
 public class ModBlocks {
     //public static Block blockTungstenOre;
