@@ -11,11 +11,24 @@ import com.marcs.modprueba.item.ModItems;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModCrafting {
+    //Tools
     public static final Object modifiers[] = {Block.blockGold, Block.blockRedstone,
         Item.diamond, Item.emerald, Block.cloth};
     public static final Enchantment enchantments[] = {Enchantment.fortune, Enchantment.efficiency, 
         Enchantment.unbreaking, Enchantment.fortune, Enchantment.silkTouch};
     public static final int lvls[] = {1,2,2,3,1};
+    //Swords
+    public static final Object modifierSword[] = {Block.blockGold, Item.diamond,
+        Item.flintAndSteel, Block.blockRedstone, Item.emerald, Item.spiderEye, Item.bone, Item.netherQuartz};
+    public static final Enchantment enchantmentSword[] = {Enchantment.looting, Enchantment.sharpness, 
+        Enchantment.fireAspect, Enchantment.knockback, Enchantment.looting, Enchantment.baneOfArthropods, Enchantment.smite, Enchantment.unbreaking};
+    public static final int lvlSword[] = {1,2,1,3,3,2,2};
+    //Bow
+    public static final Object modifierBow[] = {Block.blockGold, Item.fireballCharge,
+        Block.blockRedstone, Item.diamond, Item.netherQuartz};
+    public static final Enchantment enchantmentBow[] = {Enchantment.infinity, Enchantment.flame, 
+        Enchantment.punch, Enchantment.power, Enchantment.unbreaking};
+    public static final int lvlBow[] = {1,1,3,3,1};
     public static void init(){
         /**
          * Shaped Crafting
@@ -35,8 +48,25 @@ public class ModCrafting {
             Character.valueOf('d'), Item.diamond,
             Character.valueOf('x'), Item.expBottle});
         //Enchants
-        //Diamond
-        addEnchantableTool(Item.pickaxeDiamond);
+        //Tools
+        addEnchantableTool(Item.pickaxeDiamond, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.axeDiamond, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.shovelDiamond, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.hoeDiamond, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.pickaxeGold, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.axeGold, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.shovelGold, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.hoeGold, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.pickaxeIron, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.axeIron, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.shovelIron, modifiers, enchantments, lvls);
+        addEnchantableTool(Item.hoeIron, modifiers, enchantments, lvls);
+        //Swords
+        addEnchantableTool(Item.swordDiamond, modifierSword, enchantmentSword, lvlSword);
+        addEnchantableTool(Item.swordIron, modifierSword, enchantmentSword, lvlSword);
+        addEnchantableTool(Item.swordGold, modifierSword, enchantmentSword, lvlSword);
+        //Bows
+        addEnchantableTool(Item.swordGold, modifierBow, enchantmentBow, lvlBow);
         /**
          * Shapeless Crafting 
          */
@@ -66,18 +96,18 @@ public class ModCrafting {
         GameRegistry.addSmelting(ModBlocks.blockBismuthOre.blockID, new ItemStack(ModItems.bismuthIngot), 0.7F);
 
     }
-    public static void addEnchantableTool(Item tool){
-        for (int i = 0; i<5; i++){
+    public static void addEnchantableTool(Item tool, Object mods[], Enchantment[] enc, int[] l){
+        for (int i = 0; i<mods.length; i++){
             ItemStack toolEnc = new ItemStack(tool,1,0);
-            Enchantment e = enchantments[i];
-            int lv = lvls[i];
+            Enchantment e = enc[i];
+            int lv = l[i];
             ItemStack tl =  toolEnc;
             toolEnc.addEnchantment(e, lv);
             GameRegistry.addRecipe(toolEnc, new Object[]{
                     "dmd","dtd","ddd",
                     Character.valueOf('d'), ModItems.enchantingDust,
                     Character.valueOf('t'), tl,
-                    Character.valueOf('m'), modifiers[i]
+                    Character.valueOf('m'), mods[i]
                     });
         }
     }
