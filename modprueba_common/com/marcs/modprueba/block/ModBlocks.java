@@ -9,6 +9,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 
 public class ModBlocks {
     public static Block blockTungstenOre;
@@ -35,6 +36,12 @@ public class ModBlocks {
         GameRegistry.registerBlock(blockBismuthOre, Reference.MOD_ID + blockBismuthOre.getUnlocalizedName2());
         GameRegistry.registerBlock(blockBismuthBrick, Reference.MOD_ID + blockBismuthBrick.getUnlocalizedName2());
         GameRegistry.registerBlock(blockBrickDyed, ItemBlockBrickDyed.class, Reference.MOD_ID + blockBrickDyed.getUnlocalizedName2());
+        
+        //Harvest levels
+        MinecraftForge.setBlockHarvestLevel(blockTungstenOre, "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(blockBismuthOre, "pickaxe", 1);
+        MinecraftForge.setBlockHarvestLevel(blockBismuthBrick, "pickaxe", 1);
+        MinecraftForge.setBlockHarvestLevel(blockBrickDyed, "pickaxe", 1);
         
         registerLanguage();
     

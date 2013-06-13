@@ -21,4 +21,5 @@ public class Strings {
     public static final String TUNGSTENDUST_NAME = "Polvo de Tungsteno";
     public static final String ENCHANTINGDUST_NAME = "Polvo de Encantamientos";
     public static final String BISMUTHDUST_NAME = "Polvo de Bismuto";
+    public static final String BISMUTHPICKAXE_NAME = "Pico de Bismuto";
 }

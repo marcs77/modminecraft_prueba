@@ -9,6 +9,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 
+import com.marcs.modprueba.ModPrueba;
 import com.marcs.modprueba.lib.Reference;
 
 import cpw.mods.fml.relauncher.Side;
@@ -17,7 +18,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockBrickDyed extends Block{
     public BlockBrickDyed(int id){
         super(id, Material.rock);
-        this.setCreativeTab(CreativeTabs.tabBlock);
+        this.setCreativeTab(ModPrueba.tabsMP);
         this.setResistance(10.0F);
         this.setHardness(6.0F);
     }

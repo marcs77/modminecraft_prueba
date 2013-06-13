@@ -22,7 +22,7 @@ public class ModCrafting {
         Item.flintAndSteel, Block.blockRedstone, Item.emerald, Item.spiderEye, Item.bone, Item.netherQuartz};
     public static final Enchantment enchantmentSword[] = {Enchantment.looting, Enchantment.sharpness, 
         Enchantment.fireAspect, Enchantment.knockback, Enchantment.looting, Enchantment.baneOfArthropods, Enchantment.smite, Enchantment.unbreaking};
-    public static final int lvlSword[] = {1,2,1,3,3,2,2};
+    public static final int lvlSword[] = {1,2,1,3,3,2,2,2};
     //Bow
     public static final Object modifierBow[] = {Block.blockGold, Item.fireballCharge,
         Block.blockRedstone, Item.diamond, Item.netherQuartz};
@@ -66,7 +66,7 @@ public class ModCrafting {
         addEnchantableTool(Item.swordIron, modifierSword, enchantmentSword, lvlSword);
         addEnchantableTool(Item.swordGold, modifierSword, enchantmentSword, lvlSword);
         //Bows
-        addEnchantableTool(Item.swordGold, modifierBow, enchantmentBow, lvlBow);
+        addEnchantableTool(Item.bow, modifierBow, enchantmentBow, lvlBow);
         /**
          * Shapeless Crafting 
          */
