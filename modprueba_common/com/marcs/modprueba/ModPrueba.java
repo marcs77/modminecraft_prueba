@@ -46,7 +46,7 @@ public class ModPrueba {
     @Init
     public void init(FMLInitializationEvent event){
         proxy.registerRenders();
-        //Registra el WorldGen si está activado en la configuración
+        //Registra el WorldGen si esta activado en la configuracion
         if(ModConfig.enableWorldGen) GameRegistry.registerWorldGenerator(new WorldGeneratorPrueba());
         //Nombre de las Creative Tabs
         LanguageRegistry.instance().addStringLocalization("itemGroup."+Reference.MOD_ID, "en_US", "Mod Prueba");

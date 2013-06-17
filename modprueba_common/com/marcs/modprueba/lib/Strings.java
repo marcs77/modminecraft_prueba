@@ -8,7 +8,7 @@ public class Strings {
         "green", "red", "black"
     };
     public static final String[] COLORS_LOC = {"Blanco","Naranja","Magenta","Azul claro","Amarillo","Lima","Rosa","Gris","Gris claro",
-        "Cian","Morado","Azul","Marrón","Verde","Rojo","Negro"};
+        "Cian","Morado","Azul","Marron","Verde","Rojo","Negro"};
     //Bloques
     public static final String BISMUTH_ORE_BLOCK_NAME = "Mena de Bismuto";
     public static final String TUNGSTEN_ORE_BLOCK_NAME = "Mena de Tungsteno";

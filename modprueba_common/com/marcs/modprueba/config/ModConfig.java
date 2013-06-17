@@ -12,7 +12,7 @@ public class ModConfig {
     public static boolean enableWorldGen;
     
     public static void init(FMLPreInitializationEvent event){
-        /**Inicia la configuración. El archivo config está en ./minecraft/config/ModPrueba.cfg
+        /**Inicia la configuracion. El archivo config esta en ./minecraft/config/ModPrueba.cfg
          * Si no existe, este es creado.
          */
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
@@ -33,7 +33,7 @@ public class ModConfig {
         ItemIds.BISMUTH_DUST = config.getItem(Strings.BISMUTHDUST_NAME, ItemIds.BISMUTH_DUST_D).getInt();
         ItemIds.BISMUTH_PICKAXE = config.getItem(Strings.BISMUTHPICKAXE_NAME, ItemIds.BISMUTH_PICKAXE_D).getInt();
         //WorldGen
-        enableWorldGen = config.get(Configuration.CATEGORY_GENERAL, "enableWorldGen", true, "Activa la generación de mundos").getBoolean(true);
+        enableWorldGen = config.get(Configuration.CATEGORY_GENERAL, "enableWorldGen", true, "Activa la generacion de mundos").getBoolean(true);
         //Guarda la config
         config.save();
 
