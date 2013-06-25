@@ -20,6 +20,17 @@ public class Strings {
     public static final String BISMUTHNUGGET_NAME = "Pepita de Bismuto";
     public static final String TUNGSTENDUST_NAME = "Polvo de Tungsteno";
     public static final String ENCHANTINGDUST_NAME = "Polvo de Encantamientos";
+    
     public static final String BISMUTHDUST_NAME = "Polvo de Bismuto";
     public static final String BISMUTHPICKAXE_NAME = "Pico de Bismuto";
+    public static final String BISMUTHAXE_NAME = "Hacha de Bismuto";
+    public static final String BISMUTHSHOVEL_NAME = "Pala de Bismuto";
+    public static final String BISMUTHHOE_NAME = "Hazada de Bismuto";
+    public static final String BISMUTHSWORD_NAME = "Espada de Bismuto";
+    
+    public static final String TOMAHAWK_NAME = "Tomahawk";
+    
+    //Description
+    public static final String ENCHANTINGDUST_INFO[] = {"Con este polvo y un ingrediente,",
+        "puedes encantar herramientas ", "y armaduras."};
 }

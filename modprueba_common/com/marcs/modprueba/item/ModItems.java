@@ -14,6 +14,10 @@ public class ModItems {
     public static Item bismuthDust;
     public static Item enchantingDust;
     public static Item bismuthPickaxe;
+    public static Item bismuthAxe;
+    public static Item bismuthShovel;
+    public static Item bismuthHoe;
+    public static Item bismuthSword;
     
     public static EnumToolMaterial BISMUTH = EnumHelper.addToolMaterial("BISMUTH", 2, 300, 8.0F, 2, 14);
     
@@ -25,6 +29,10 @@ public class ModItems {
         bismuthDust = new ItemBismuthDust(ItemIds.BISMUTH_DUST).setUnlocalizedName("itemBismuthDust");
         enchantingDust = new ItemEnchantingDust(ItemIds.ENCHANTING_DUST).setUnlocalizedName("itemEnchantingDust");
         bismuthPickaxe = new ItemBismuthPickaxe(ItemIds.BISMUTH_PICKAXE).setUnlocalizedName("itemBismuthPickaxe");
+        bismuthAxe = new ItemBismuthAxe(ItemIds.BISMUTH_AXE).setUnlocalizedName("itemBismuthAxe");
+        bismuthShovel = new ItemBismuthShovel(ItemIds.BISMUTH_SHOVEL).setUnlocalizedName("itemBismuthShovel");
+        bismuthHoe = new ItemBismuthHoe(ItemIds.BISMUTH_HOE).setUnlocalizedName("itemBismuthHoe");
+        bismuthSword = new ItemBismuthSword(ItemIds.BISMUTH_SWORD).setUnlocalizedName("itemBismuthSword");
         registerLanguage();
 
     }
@@ -36,6 +44,10 @@ public class ModItems {
         LanguageRegistry.addName(bismuthDust, Strings.BISMUTHDUST_NAME);
         LanguageRegistry.addName(enchantingDust, Strings.ENCHANTINGDUST_NAME);
         LanguageRegistry.addName(bismuthPickaxe, Strings.BISMUTHPICKAXE_NAME);
+        LanguageRegistry.addName(bismuthAxe, Strings.BISMUTHAXE_NAME);
+        LanguageRegistry.addName(bismuthShovel, Strings.BISMUTHSHOVEL_NAME);
+        LanguageRegistry.addName(bismuthHoe, Strings.BISMUTHHOE_NAME);
+        LanguageRegistry.addName(bismuthSword, Strings.BISMUTHSWORD_NAME);
     }
     
 }

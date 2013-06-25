@@ -32,6 +32,10 @@ public class ModConfig {
         ItemIds.ENCHANTING_DUST = config.getItem(Strings.ENCHANTINGDUST_NAME, ItemIds.ENCHANTING_DUST_D).getInt();
         ItemIds.BISMUTH_DUST = config.getItem(Strings.BISMUTHDUST_NAME, ItemIds.BISMUTH_DUST_D).getInt();
         ItemIds.BISMUTH_PICKAXE = config.getItem(Strings.BISMUTHPICKAXE_NAME, ItemIds.BISMUTH_PICKAXE_D).getInt();
+        ItemIds.BISMUTH_AXE = config.getItem(Strings.BISMUTHAXE_NAME, ItemIds.BISMUTH_AXE_D).getInt();
+        ItemIds.BISMUTH_SHOVEL = config.getItem(Strings.BISMUTHSHOVEL_NAME, ItemIds.BISMUTH_SHOVEL_D).getInt();
+        ItemIds.BISMUTH_HOE = config.getItem(Strings.BISMUTHHOE_NAME, ItemIds.BISMUTH_HOE_D).getInt();
+        ItemIds.BISMUTH_SWORD = config.getItem(Strings.BISMUTHSWORD_NAME, ItemIds.BISMUTH_SWORD_D).getInt();
         //WorldGen
         enableWorldGen = config.get(Configuration.CATEGORY_GENERAL, "enableWorldGen", true, "Activa la generacion de mundos").getBoolean(true);
         //Guarda la config

@@ -47,20 +47,43 @@ public class ModCrafting {
             Character.valueOf('t'), ModItems.tungstenDust,
             Character.valueOf('d'), Item.diamond,
             Character.valueOf('x'), Item.expBottle});
+        //Pico de bismuto
+        GameRegistry.addRecipe(new ItemStack(ModItems.bismuthPickaxe), new Object[] { "bbb", " s ", " s ",
+            Character.valueOf('b'), ModItems.bismuthIngot,
+            Character.valueOf('s'), Item.stick});
+        //Hacha de bismuto
+        GameRegistry.addRecipe(new ItemStack(ModItems.bismuthAxe), new Object[] { " bb", " sb", " s ",
+            Character.valueOf('b'), ModItems.bismuthIngot,
+            Character.valueOf('s'), Item.stick});
+        //Pala de bismuto
+        GameRegistry.addRecipe(new ItemStack(ModItems.bismuthShovel), new Object[] { " b ", " s ", " s ",
+            Character.valueOf('b'), ModItems.bismuthIngot,
+            Character.valueOf('s'), Item.stick});
+        //Hazada de bismuto
+        GameRegistry.addRecipe(new ItemStack(ModItems.bismuthHoe), new Object[] { " bb", " s ", " s ",
+            Character.valueOf('b'), ModItems.bismuthIngot,
+            Character.valueOf('s'), Item.stick});
         //Enchants
-        //Tools
+        //Tools //Diamond
         addEnchantableTool(Item.pickaxeDiamond, modifiers, enchantments, lvls);
         addEnchantableTool(Item.axeDiamond, modifiers, enchantments, lvls);
         addEnchantableTool(Item.shovelDiamond, modifiers, enchantments, lvls);
         addEnchantableTool(Item.hoeDiamond, modifiers, enchantments, lvls);
+        //Gold
         addEnchantableTool(Item.pickaxeGold, modifiers, enchantments, lvls);
         addEnchantableTool(Item.axeGold, modifiers, enchantments, lvls);
         addEnchantableTool(Item.shovelGold, modifiers, enchantments, lvls);
         addEnchantableTool(Item.hoeGold, modifiers, enchantments, lvls);
+        //Iron
         addEnchantableTool(Item.pickaxeIron, modifiers, enchantments, lvls);
         addEnchantableTool(Item.axeIron, modifiers, enchantments, lvls);
         addEnchantableTool(Item.shovelIron, modifiers, enchantments, lvls);
         addEnchantableTool(Item.hoeIron, modifiers, enchantments, lvls);
+        //Bismuth
+        addEnchantableTool(ModItems.bismuthPickaxe, modifiers, enchantments, lvls);
+        addEnchantableTool(ModItems.bismuthAxe, modifiers, enchantments, lvls);
+        addEnchantableTool(ModItems.bismuthShovel, modifiers, enchantments, lvls);
+        addEnchantableTool(ModItems.bismuthHoe, modifiers, enchantments, lvls);
         //Swords
         addEnchantableTool(Item.swordDiamond, modifierSword, enchantmentSword, lvlSword);
         addEnchantableTool(Item.swordIron, modifierSword, enchantmentSword, lvlSword);
