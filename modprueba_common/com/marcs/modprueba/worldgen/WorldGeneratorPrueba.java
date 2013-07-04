@@ -17,16 +17,16 @@ public class WorldGeneratorPrueba implements IWorldGenerator{
         
         switch(world.provider.dimensionId){
             case 1:{
-                //Nether
-                generateNether(world, random, chunkX*16, chunkZ*16);
+                //The End
+                generateEnd(world, random, chunkX*16, chunkZ*16);
             }
             case 0:{
                 //Overworld
                 generateSurface(world, random, chunkX*16, chunkZ*16);
             }
             case -1:{
-              //The End
-                generateEnd(world, random, chunkX*16, chunkZ*16);
+                //Nether
+                generateNether(world, random, chunkX*16, chunkZ*16);
             }
             default:{
                 generateSurface(world, random, chunkX*16, chunkZ*16);
