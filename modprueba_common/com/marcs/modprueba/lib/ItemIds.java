@@ -24,4 +24,5 @@ public class ItemIds {
     public static int BISMUTH_SHOVEL;
     public static int BISMUTH_HOE;
     public static int BISMUTH_SWORD;
+    public static int TOMAHAWK;
 }

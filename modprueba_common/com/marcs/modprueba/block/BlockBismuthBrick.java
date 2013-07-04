@@ -19,7 +19,7 @@ public class BlockBismuthBrick extends Block{
     }
     @SideOnly(Side.CLIENT)
     public void registerIcons (IconRegister reg){
-        this.blockIcon = reg.registerIcon(Reference.MOD_ID+":"+this.getUnlocalizedName2());
+        this.blockIcon = reg.registerIcon(Reference.MOD_ID.toLowerCase()+":"+this.getUnlocalizedName2());
     }
 }
 

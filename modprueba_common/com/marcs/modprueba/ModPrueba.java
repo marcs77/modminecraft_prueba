@@ -7,12 +7,15 @@ import com.marcs.modprueba.config.ModConfig;
 import com.marcs.modprueba.core.proxy.ClientProxy;
 import com.marcs.modprueba.crafting.ModCrafting;
 import com.marcs.modprueba.creativetabs.CreativeTabModPrueba;
+import com.marcs.modprueba.entity.EntityNukePrimed;
+import com.marcs.modprueba.entity.EntityTomahawk;
 import com.marcs.modprueba.item.ModItems;
 import com.marcs.modprueba.lib.Reference;
 import com.marcs.modprueba.worldgen.WorldGeneratorPrueba;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PostInit;
 import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
@@ -20,6 +23,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -27,6 +31,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 public class ModPrueba {
+    
+    @Instance(Reference.MOD_ID)
+    public static ModPrueba instance;
     
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
     public static ClientProxy proxy; 
@@ -51,6 +58,12 @@ public class ModPrueba {
         //Nombre de las Creative Tabs
         LanguageRegistry.instance().addStringLocalization("itemGroup."+Reference.MOD_ID, "en_US", "Mod Prueba");
         LanguageRegistry.instance().addStringLocalization("itemGroup."+Reference.MOD_ID, "es_ES", "Mod de Prueba");
+        //Entities
+        EntityRegistry.registerModEntity(EntityTomahawk.class, "entityTomahawk", 98, this, 64, 1, true);
+        
+        EntityRegistry.registerGlobalEntityID(EntityNukePrimed.class, "entityNuke", EntityRegistry.findGlobalUniqueEntityId());
+        EntityRegistry.registerModEntity(EntityNukePrimed.class, "entityNuke", 0, this, 16, 1, false);
+
     }
     
     @PostInit

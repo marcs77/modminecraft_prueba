@@ -15,6 +15,7 @@ public class Strings {
     public static final String TESTBLOCK_SLAB_NAME = "Medio bloque";
     public static final String TESTBLOCK_SLABDOUBLE_NAME = "Doble medio bloque";
     public static final String BISMUTHBRICK_NAME = "Ladrillo de Bismuto";
+    public static final String NUKE_NAME = "Bomba nuclear";
     //Items
     public static final String BISMUTHINGOT_NAME = "Lingote de Bismuto";
     public static final String BISMUTHNUGGET_NAME = "Pepita de Bismuto";

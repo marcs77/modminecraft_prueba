@@ -18,6 +18,7 @@ public class ModBlocks {
     public static Block blockBismuthOre;
     public static Block blockBismuthBrick;
     public static Block blockBrickDyed;
+    public static Block blockNuke;
     
     public static void init (){
         //Declarando los bloques
@@ -28,6 +29,8 @@ public class ModBlocks {
         blockBismuthBrick = new BlockBismuthBrick(BlockIds.BISMUTH_BRICK).setUnlocalizedName("blockBismuthBrick");
         //Ladrillos tintados
         blockBrickDyed = new BlockBrickDyed(BlockIds.BISMUTH_BRICK_DYED).setUnlocalizedName("blockBrickDyed");
+        //Nuke
+        blockNuke = new BlockNuke(BlockIds.NUKE).setUnlocalizedName("blockNuke");
         
         //Registrando en el juego
         GameRegistry.registerBlock(blockTungstenOre, Reference.MOD_ID + blockTungstenOre.getUnlocalizedName2());
@@ -36,6 +39,7 @@ public class ModBlocks {
         GameRegistry.registerBlock(blockBismuthOre, Reference.MOD_ID + blockBismuthOre.getUnlocalizedName2());
         GameRegistry.registerBlock(blockBismuthBrick, Reference.MOD_ID + blockBismuthBrick.getUnlocalizedName2());
         GameRegistry.registerBlock(blockBrickDyed, ItemBlockBrickDyed.class, Reference.MOD_ID + blockBrickDyed.getUnlocalizedName2());
+        GameRegistry.registerBlock(blockNuke, Reference.MOD_ID + blockNuke.getUnlocalizedName2());
         
         //Harvest levels
         MinecraftForge.setBlockHarvestLevel(blockTungstenOre, "pickaxe", 2);
@@ -52,6 +56,7 @@ public class ModBlocks {
         LanguageRegistry.addName(blockTestSlabDouble, Strings.TESTBLOCK_SLABDOUBLE_NAME);
         LanguageRegistry.addName(blockBismuthOre, Strings.BISMUTH_ORE_BLOCK_NAME);
         LanguageRegistry.addName(blockBismuthBrick, Strings.BISMUTHBRICK_NAME);
+        LanguageRegistry.addName(blockNuke, Strings.NUKE_NAME);
         //Dyed Bricks
         for (int i=0; i<16; i++){
             ItemStack brickDyed = new ItemStack(blockBrickDyed,1,i);

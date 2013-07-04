@@ -1,14 +1,15 @@
 package com.marcs.modprueba.item;
 
 import com.marcs.modprueba.ModPrueba;
+import com.marcs.modprueba.entity.EntityTomahawk;
 import com.marcs.modprueba.lib.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -18,7 +19,7 @@ public class ItemTomahawk extends Item{
     public ItemTomahawk(int par1)
     {
         super(par1);
-        this.maxStackSize = 16;
+        this.maxStackSize = 64;
         this.setCreativeTab(ModPrueba.tabsMP);
     }
     @SideOnly(Side.CLIENT)
@@ -37,7 +38,9 @@ public class ItemTomahawk extends Item{
 
         if (!par2World.isRemote)
         {
-            par2World.spawnEntityInWorld(new EntitySnowball(par2World, par3EntityPlayer));
+            Entity tomahawk = new EntityTomahawk(par2World, par3EntityPlayer);
+            tomahawk.setFire(1000);
+            par2World.spawnEntityInWorld(tomahawk);
         }
 
         return par1ItemStack;
