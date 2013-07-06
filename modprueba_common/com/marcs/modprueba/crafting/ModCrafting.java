@@ -29,6 +29,13 @@ public class ModCrafting {
     public static final Enchantment enchantmentBow[] = {Enchantment.infinity, Enchantment.flame, 
         Enchantment.punch, Enchantment.power, Enchantment.unbreaking};
     public static final int lvlBow[] = {1,1,3,3,1};
+    //Armor
+    public static final Object modifierArmor[] = {Item.diamond, Item.bucketLava,
+        Item.feather, Block.obsidian, Item.arrow, Item.fishRaw, Item.bucketWater, Block.cactus, Block.blockIron};
+    public static final Enchantment enchantmentArmor[] = {Enchantment.protection, Enchantment.fireProtection, 
+        Enchantment.featherFalling, Enchantment.blastProtection, Enchantment.projectileProtection, Enchantment.respiration, 
+        Enchantment.aquaAffinity, Enchantment.thorns, Enchantment.unbreaking};
+    public static final int lvlArmor[] = {2,2,2,2,2,2,2,2,2};
     public static void init(){
         /**
          * Shaped Crafting
@@ -65,31 +72,57 @@ public class ModCrafting {
             Character.valueOf('s'), Item.stick});
         //Enchants
         //Tools //Diamond
-        addEnchantableTool(Item.pickaxeDiamond, modifiers, enchantments, lvls);
-        addEnchantableTool(Item.axeDiamond, modifiers, enchantments, lvls);
-        addEnchantableTool(Item.shovelDiamond, modifiers, enchantments, lvls);
-        addEnchantableTool(Item.hoeDiamond, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.pickaxeDiamond, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.axeDiamond, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.shovelDiamond, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.hoeDiamond, modifiers, enchantments, lvls);
         //Gold
-        addEnchantableTool(Item.pickaxeGold, modifiers, enchantments, lvls);
-        addEnchantableTool(Item.axeGold, modifiers, enchantments, lvls);
-        addEnchantableTool(Item.shovelGold, modifiers, enchantments, lvls);
-        addEnchantableTool(Item.hoeGold, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.pickaxeGold, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.axeGold, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.shovelGold, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.hoeGold, modifiers, enchantments, lvls);
         //Iron
-        addEnchantableTool(Item.pickaxeIron, modifiers, enchantments, lvls);
-        addEnchantableTool(Item.axeIron, modifiers, enchantments, lvls);
-        addEnchantableTool(Item.shovelIron, modifiers, enchantments, lvls);
-        addEnchantableTool(Item.hoeIron, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.pickaxeIron, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.axeIron, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.shovelIron, modifiers, enchantments, lvls);
+        addEnchantableItem(Item.hoeIron, modifiers, enchantments, lvls);
         //Bismuth
-        addEnchantableTool(ModItems.bismuthPickaxe, modifiers, enchantments, lvls);
-        addEnchantableTool(ModItems.bismuthAxe, modifiers, enchantments, lvls);
-        addEnchantableTool(ModItems.bismuthShovel, modifiers, enchantments, lvls);
-        addEnchantableTool(ModItems.bismuthHoe, modifiers, enchantments, lvls);
+        addEnchantableItem(ModItems.bismuthPickaxe, modifiers, enchantments, lvls);
+        addEnchantableItem(ModItems.bismuthAxe, modifiers, enchantments, lvls);
+        addEnchantableItem(ModItems.bismuthShovel, modifiers, enchantments, lvls);
+        addEnchantableItem(ModItems.bismuthHoe, modifiers, enchantments, lvls);
         //Swords
-        addEnchantableTool(Item.swordDiamond, modifierSword, enchantmentSword, lvlSword);
-        addEnchantableTool(Item.swordIron, modifierSword, enchantmentSword, lvlSword);
-        addEnchantableTool(Item.swordGold, modifierSword, enchantmentSword, lvlSword);
+        addEnchantableItem(Item.swordDiamond, modifierSword, enchantmentSword, lvlSword);
+        addEnchantableItem(Item.swordIron, modifierSword, enchantmentSword, lvlSword);
+        addEnchantableItem(Item.swordGold, modifierSword, enchantmentSword, lvlSword);
         //Bows
-        addEnchantableTool(Item.bow, modifierBow, enchantmentBow, lvlBow);
+        addEnchantableItem(Item.bow, modifierBow, enchantmentBow, lvlBow);
+        
+        //Armor // Diamond
+        addEnchantableItem(Item.helmetDiamond, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.plateDiamond, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.legsDiamond, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.bootsDiamond, modifierArmor, enchantmentArmor, lvlArmor);
+        //Gold
+        addEnchantableItem(Item.helmetGold, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.plateGold, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.legsGold, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.bootsGold, modifierArmor, enchantmentArmor, lvlArmor);
+        //Iron
+        addEnchantableItem(Item.helmetIron, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.plateIron, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.legsIron, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.bootsIron, modifierArmor, enchantmentArmor, lvlArmor);
+        //Chain
+        addEnchantableItem(Item.helmetChain, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.plateChain, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.legsChain, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.bootsChain, modifierArmor, enchantmentArmor, lvlArmor);
+        //Leather
+        addEnchantableItem(Item.helmetLeather, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.plateLeather, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.legsLeather, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(Item.bootsLeather, modifierArmor, enchantmentArmor, lvlArmor);
         /**
          * Shapeless Crafting 
          */
@@ -119,7 +152,7 @@ public class ModCrafting {
         GameRegistry.addSmelting(ModBlocks.blockBismuthOre.blockID, new ItemStack(ModItems.bismuthIngot), 0.7F);
 
     }
-    public static void addEnchantableTool(Item tool, Object mods[], Enchantment[] enc, int[] l){
+    public static void addEnchantableItem(Item tool, Object mods[], Enchantment[] enc, int[] l){
         for (int i = 0; i<mods.length; i++){
             ItemStack toolEnc = new ItemStack(tool,1,0);
             Enchantment e = enc[i];
