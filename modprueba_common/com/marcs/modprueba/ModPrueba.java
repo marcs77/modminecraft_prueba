@@ -4,7 +4,7 @@ import net.minecraft.creativetab.CreativeTabs;
 
 import com.marcs.modprueba.block.ModBlocks;
 import com.marcs.modprueba.config.ModConfig;
-import com.marcs.modprueba.core.proxy.ClientProxy;
+import com.marcs.modprueba.core.proxy.CommonProxy;
 import com.marcs.modprueba.crafting.ModCrafting;
 import com.marcs.modprueba.creativetabs.CreativeTabModPrueba;
 import com.marcs.modprueba.entity.EntityNukePrimed;
@@ -36,7 +36,7 @@ public class ModPrueba {
     public static ModPrueba instance;
     
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.COMMON_PROXY_CLASS)
-    public static ClientProxy proxy; 
+    public static CommonProxy proxy; 
     
     public static CreativeTabs tabsMP = new CreativeTabModPrueba(CreativeTabs.getNextID(), Reference.MOD_ID);
     @PreInit
