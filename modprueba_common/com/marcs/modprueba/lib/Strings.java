@@ -31,6 +31,11 @@ public class Strings {
     
     public static final String TOMAHAWK_NAME = "Tomahawk";
     
+    public static final String BISMUTHHELMET_NAME = "Casco de Bismuto";
+    public static final String BISMUTHPLATE_NAME = "Armadura de Bismuto";
+    public static final String BISMUTHLEGS_NAME = "Pantalones de Bismuto";
+    public static final String BISMUTHBOOTS_NAME = "Botas de Bismuto";
+    
     //Description
     public static final String ENCHANTINGDUST_INFO[] = {"Con este polvo y un ingrediente,",
         "puedes encantar herramientas ", "y armaduras."};

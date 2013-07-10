@@ -19,4 +19,8 @@ public class ClientProxy extends CommonProxy{
         RenderingRegistry.registerEntityRenderingHandler(
                 EntityNukePrimed.class, new RenderNukePrimed());
     }
+    
+    public int addArmor(String armor){
+        return RenderingRegistry.addNewArmourRendererPrefix(armor);
+    }
 }

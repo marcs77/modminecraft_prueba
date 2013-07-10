@@ -70,7 +70,23 @@ public class ModCrafting {
         GameRegistry.addRecipe(new ItemStack(ModItems.bismuthHoe), new Object[] { " bb", " s ", " s ",
             Character.valueOf('b'), ModItems.bismuthIngot,
             Character.valueOf('s'), Item.stick});
-        //Enchants
+        
+        /** Armaduras **/
+        //Bismuth
+        GameRegistry.addRecipe(new ItemStack(ModItems.bismuthHelmet), new Object[] { "bsb", "b b", "   ",
+            Character.valueOf('b'), ModItems.bismuthIngot,
+            Character.valueOf('s'), Item.ingotIron});
+        GameRegistry.addRecipe(new ItemStack(ModItems.bismuthPlate), new Object[] { "b b", "bsb", "bbb",
+            Character.valueOf('b'), ModItems.bismuthIngot,
+            Character.valueOf('s'), Item.ingotIron});
+        GameRegistry.addRecipe(new ItemStack(ModItems.bismuthLegs), new Object[] { "bsb", "b b", "b b",
+            Character.valueOf('b'), ModItems.bismuthIngot,
+            Character.valueOf('s'), Item.ingotIron});
+        GameRegistry.addRecipe(new ItemStack(ModItems.bismuthBoots), new Object[] { "b b", "bsb",
+            Character.valueOf('b'), ModItems.bismuthIngot,
+            Character.valueOf('s'), Item.ingotIron});
+        
+        /**Enchants**/
         //Tools //Diamond
         addEnchantableItem(Item.pickaxeDiamond, modifiers, enchantments, lvls);
         addEnchantableItem(Item.axeDiamond, modifiers, enchantments, lvls);
@@ -123,6 +139,11 @@ public class ModCrafting {
         addEnchantableItem(Item.plateLeather, modifierArmor, enchantmentArmor, lvlArmor);
         addEnchantableItem(Item.legsLeather, modifierArmor, enchantmentArmor, lvlArmor);
         addEnchantableItem(Item.bootsLeather, modifierArmor, enchantmentArmor, lvlArmor);
+        //Bismuth
+        addEnchantableItem(ModItems.bismuthHelmet, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(ModItems.bismuthPlate, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(ModItems.bismuthLegs, modifierArmor, enchantmentArmor, lvlArmor);
+        addEnchantableItem(ModItems.bismuthBoots, modifierArmor, enchantmentArmor, lvlArmor);
         /**
          * Shapeless Crafting 
          */

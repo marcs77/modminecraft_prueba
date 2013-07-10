@@ -7,12 +7,20 @@ public class ItemIds {
     public static final int BISMUTH_NUGGET_D = 6002;
     public static final int ENCHANTING_DUST_D = 6003;
     public static final int BISMUTH_DUST_D = 6004;
+    
     public static final int BISMUTH_PICKAXE_D = 6005;
     public static final int BISMUTH_AXE_D = 6006;
     public static final int BISMUTH_SHOVEL_D = 6007;
     public static final int BISMUTH_HOE_D = 6008;
     public static final int BISMUTH_SWORD_D = 6009;
+    
     public static final int TOMAHAWK_D = 6010;
+    
+    public static final int BISMUTH_HELMET_D = 6011;
+    public static final int BISMUTH_PLATE_D = 6012;
+    public static final int BISMUTH_LEGS_D = 6013;
+    public static final int BISMUTH_BOOTS_D = 6014;
+    
     //Ids de config
     public static int TUNGSTEN_DUST;
     public static int BISMUTH_INGOT;
@@ -25,4 +33,8 @@ public class ItemIds {
     public static int BISMUTH_HOE;
     public static int BISMUTH_SWORD;
     public static int TOMAHAWK;
+    public static int BISMUTH_HELMET;
+    public static int BISMUTH_PLATE;
+    public static int BISMUTH_LEGS;
+    public static int BISMUTH_BOOTS;
 }

@@ -40,6 +40,11 @@ public class ModConfig {
         ItemIds.BISMUTH_HOE = config.getItem(Strings.BISMUTHHOE_NAME, ItemIds.BISMUTH_HOE_D).getInt();
         ItemIds.BISMUTH_SWORD = config.getItem(Strings.BISMUTHSWORD_NAME, ItemIds.BISMUTH_SWORD_D).getInt();
         ItemIds.TOMAHAWK = config.getItem(Strings.TOMAHAWK_NAME, ItemIds.TOMAHAWK_D).getInt();
+        
+        ItemIds.BISMUTH_HELMET = config.getItem(Strings.BISMUTHHELMET_NAME, ItemIds.BISMUTH_HELMET_D).getInt();
+        ItemIds.BISMUTH_PLATE = config.getItem(Strings.BISMUTHPLATE_NAME, ItemIds.BISMUTH_PLATE_D).getInt();
+        ItemIds.BISMUTH_LEGS = config.getItem(Strings.BISMUTHLEGS_NAME, ItemIds.BISMUTH_LEGS_D).getInt();
+        ItemIds.BISMUTH_BOOTS = config.getItem(Strings.BISMUTHBOOTS_NAME, ItemIds.BISMUTH_BOOTS_D).getInt();
         //WorldGen
         enableWorldGen = config.get(Configuration.CATEGORY_GENERAL, "enableWorldGen", true, "Activa la generacion de mundos").getBoolean(true);
         tomahawkMobDamage = config.get(Configuration.CATEGORY_GENERAL, "tomahawkMobDamage", 8, "Daño que produce un tomahawk a un mob.").getInt(8);
