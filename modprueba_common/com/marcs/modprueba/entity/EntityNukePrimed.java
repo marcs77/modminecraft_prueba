@@ -111,7 +111,7 @@ public class EntityNukePrimed extends Entity{
                 entity = (EntityLiving)it.next();
                 entity.addPotionEffect(new PotionEffect(19, 2400, 1, false));
                 entity.addPotionEffect(new PotionEffect(18, 2400, 1, false));
-                entity.addPotionEffect(new PotionEffect(9, 2400, 3, false));
+                entity.addPotionEffect(new PotionEffect(9, 400, 3, false));
         }
     }
 
