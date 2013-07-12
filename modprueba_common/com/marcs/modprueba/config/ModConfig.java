@@ -28,6 +28,7 @@ public class ModConfig {
         BlockIds.BISMUTH_BRICK = config.getBlock(Strings.BISMUTHBRICK_NAME, BlockIds.BISMUTH_BRICK_D).getInt();
         BlockIds.BISMUTH_BRICK_DYED = config.getBlock(Strings.BISMUTHBRICK_NAME+"Dyed", BlockIds.BISMUTH_BRICK_DYED_D).getInt();
         BlockIds.NUKE = config.getBlock(Strings.NUKE_NAME, BlockIds.NUKE_D).getInt();
+        BlockIds.PORTABLE_BENCH = config.getBlock(Strings.PORTABLEBENCH_NAME, BlockIds.PORTABLE_BENCH_D).getInt();
         //Item
         ItemIds.TUNGSTEN_DUST = config.getItem(Strings.TUNGSTENDUST_NAME, ItemIds.TUNGSTEN_DUST_D).getInt();
         ItemIds.BISMUTH_INGOT = config.getItem(Strings.BISMUTHINGOT_NAME, ItemIds.BISMUTH_INGOT_D).getInt();

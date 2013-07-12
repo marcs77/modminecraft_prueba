@@ -9,6 +9,7 @@ public class BlockIds {
     public static final int BISMUTH_BRICK_D = 504;
     public static final int BISMUTH_BRICK_DYED_D = 505;
     public static final int NUKE_D = 506;
+    public static final int PORTABLE_BENCH_D = 507;
     //Ids de la config
     public static int TUNGSTEN_ORE_BLOCK;
     public static int TEST_SLAB;
@@ -17,4 +18,5 @@ public class BlockIds {
     public static int BISMUTH_BRICK;
     public static int BISMUTH_BRICK_DYED;
     public static int NUKE;
+    public static int PORTABLE_BENCH;
 }

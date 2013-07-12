@@ -47,12 +47,12 @@ public class ModPrueba {
         //Contenido del MOD
         ModBlocks.init();
         ModItems.init();
-        ModCrafting.init();
     }
     
     @Init
     public void init(FMLInitializationEvent event){
         proxy.registerRenders();
+        ModCrafting.init();
         //Registra el WorldGen si esta activado en la configuracion
         if(ModConfig.enableWorldGen) GameRegistry.registerWorldGenerator(new WorldGeneratorPrueba());
         //Nombre de las Creative Tabs

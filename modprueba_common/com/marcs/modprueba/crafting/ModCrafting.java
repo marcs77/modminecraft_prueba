@@ -4,9 +4,12 @@ import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.nbt.NBTTagString;
 
 import com.marcs.modprueba.block.ModBlocks;
 import com.marcs.modprueba.item.ModItems;
+import com.marcs.modprueba.lib.Strings;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -49,7 +52,7 @@ public class ModCrafting {
             Character.valueOf('b'), Block.stoneBrick
             });
         //EnchantingDust
-        GameRegistry.addRecipe(new ItemStack(ModItems.enchantingDust,32), new Object[] { "tdt", "xbx", "txt",
+        GameRegistry.addRecipe(new ItemStack(ModItems.enchantingDust, 14), new Object[] { "tdt", "xbx", "txt",
             Character.valueOf('b'), ModItems.bismuthDust,
             Character.valueOf('t'), ModItems.tungstenDust,
             Character.valueOf('d'), Item.diamond,
@@ -144,6 +147,7 @@ public class ModCrafting {
         addEnchantableItem(ModItems.bismuthPlate, modifierArmor, enchantmentArmor, lvlArmor);
         addEnchantableItem(ModItems.bismuthLegs, modifierArmor, enchantmentArmor, lvlArmor);
         addEnchantableItem(ModItems.bismuthBoots, modifierArmor, enchantmentArmor, lvlArmor);
+        
         /**
          * Shapeless Crafting 
          */
@@ -165,6 +169,19 @@ public class ModCrafting {
             new ItemStack(ModItems.bismuthIngot),new ItemStack(ModItems.bismuthIngot),
             new ItemStack(ModItems.bismuthIngot),new ItemStack(ModItems.bismuthIngot),
             new ItemStack(ModItems.bismuthIngot),new ItemStack(ModItems.bismuthIngot), new ItemStack(Item.flint)
+        });
+        
+        ItemStack book = new ItemStack(Item.writableBook);
+        NBTTagList pages = new NBTTagList("pages");
+        pages.appendTag(new NBTTagString("1", Strings.BOOK_PAGES[0]));
+        pages.appendTag(new NBTTagString("2", "udsfsdsdfsdfsdfsdfsdf"));
+        book.setTagInfo("pages", pages);
+        book.setTagInfo("author", new NBTTagString("author",Strings.BOOK_AUTHOR));
+        book.setTagInfo("title", new NBTTagString("title",Strings.BOOK_TITLE));
+        book.itemID = Item.writtenBook.itemID;
+        
+        GameRegistry.addShapelessRecipe(book, new Object[]{
+                Item.book, new ItemStack(Item.dyePowder, 1, 12)
         });
         /**
          * Smelting

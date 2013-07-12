@@ -16,6 +16,7 @@ public class Strings {
     public static final String TESTBLOCK_SLABDOUBLE_NAME = "Doble medio bloque";
     public static final String BISMUTHBRICK_NAME = "Ladrillo de Bismuto";
     public static final String NUKE_NAME = "Bomba nuclear";
+    public static final String PORTABLEBENCH_NAME = "Mesa de trabajo portatil";
     //Items
     public static final String BISMUTHINGOT_NAME = "Lingote de Bismuto";
     public static final String BISMUTHNUGGET_NAME = "Pepita de Bismuto";
@@ -39,4 +40,11 @@ public class Strings {
     //Description
     public static final String ENCHANTINGDUST_INFO[] = {"Con este polvo y un ingrediente,",
         "puedes encantar herramientas ", "y armaduras."};
+    
+    public static final String BOOK_PAGES[] = {
+        "§9Con estos polvos de encantamientos puedes hacer que cualquier herramienta o armadura tenga un encantamiento dependiendo" +
+        " del ingrediente especial que se utilize. La manera de utilizar estos polvos"
+    };
+    public static final String BOOK_AUTHOR = "blockhack";
+    public static final String BOOK_TITLE = "Manual polvos de encantamiento";
 }
