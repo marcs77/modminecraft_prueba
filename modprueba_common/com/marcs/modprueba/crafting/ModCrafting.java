@@ -183,6 +183,12 @@ public class ModCrafting {
         GameRegistry.addShapelessRecipe(book, new Object[]{
                 Item.book, new ItemStack(Item.dyePowder, 1, 12)
         });
+        
+        ItemStack head = new ItemStack(Item.skull);
+        head.getTagCompound().setString("SkullOwner", "blockhack");
+        GameRegistry.addShapelessRecipe(head, new Object[]{
+                Item.appleRed
+        });
         /**
          * Smelting
          */

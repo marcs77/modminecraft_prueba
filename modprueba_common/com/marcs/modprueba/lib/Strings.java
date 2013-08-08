@@ -42,8 +42,7 @@ public class Strings {
         "puedes encantar herramientas ", "y armaduras."};
     
     public static final String BOOK_PAGES[] = {
-        "§9Con estos polvos de encantamientos puedes hacer que cualquier herramienta o armadura tenga un encantamiento dependiendo" +
-        " del ingrediente especial que se utilize. La manera de utilizar estos polvos"
+        "Con estos polvos de encantamientos puedes hacer que cualquier herramienta o"
     };
     public static final String BOOK_AUTHOR = "blockhack";
     public static final String BOOK_TITLE = "Manual polvos de encantamiento";

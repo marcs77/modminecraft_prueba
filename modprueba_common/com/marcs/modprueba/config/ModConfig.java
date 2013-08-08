@@ -48,8 +48,8 @@ public class ModConfig {
         ItemIds.BISMUTH_BOOTS = config.getItem(Strings.BISMUTHBOOTS_NAME, ItemIds.BISMUTH_BOOTS_D).getInt();
         //WorldGen
         enableWorldGen = config.get(Configuration.CATEGORY_GENERAL, "enableWorldGen", true, "Activa la generacion de mundos").getBoolean(true);
-        tomahawkMobDamage = config.get(Configuration.CATEGORY_GENERAL, "tomahawkMobDamage", 8, "Daño que produce un tomahawk a un mob.").getInt(8);
-        tomahawkPlayerDamage = config.get(Configuration.CATEGORY_GENERAL, "tomahawkPlayerDamage", 8, "Daño que produce un tomahawk a un player.").getInt(8);
+        tomahawkMobDamage = config.get(Configuration.CATEGORY_GENERAL, "tomahawkMobDamage", 8, "Damage que produce un tomahawk a un mob.").getInt(8);
+        tomahawkPlayerDamage = config.get(Configuration.CATEGORY_GENERAL, "tomahawkPlayerDamage", 8, "Damage que produce un tomahawk a un player.").getInt(8);
         //Guarda la config
         config.save();
 
